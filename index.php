@@ -39,10 +39,10 @@
                     <div class="nav">
                         <ul>
                             <li class="active">TRANG CHỦ</li>
-                            <li><a href="danh-sach-sp.php">SẢN PHẨM</a></li>
-                            <li><a href="gioi-thieu.php">GIỚI THIỆU</a></li>
-                            <li><a href="bao-hanh.php">BẢO HÀNH</a></li>
-                            <li><a href="lien-he.php">LIÊN HỆ</a></li>
+                            <li><a href="trang-chinh/danh-sach-sp.php">SẢN PHẨM</a></li>
+                            <li><a href="trang-chinh/gioi-thieu.php">GIỚI THIỆU</a></li>
+                            <li><a href="trang-chinh/bao-hanh.php">BẢO HÀNH</a></li>
+                            <li><a href="trang-chinh/lien-he.php">LIÊN HỆ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                         <p class="nho">CHÂN TÔI VẪN ĐANG ĐI TRÊN MẶT ĐẤT,</p>
                         <p class="nho">VÀ TÔI CHỈ ĐANG ĐI NHỮNG ĐÔI GIÀY TỐT HƠN ... </p>
                         <P class="likk">
-                            <a href="danh-sach-sp.php"><span>SHOPPING</span></a>
+                            <a href="trang-chinh/danh-sach-sp.php"><span>SHOPPING</span></a>
                         </P>
                     </div>
                 </div>

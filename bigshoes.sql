@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2020 at 08:52 AM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.4.7
+-- Generation Time: Apr 24, 2024 at 08:24 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,20 +29,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `binh_luan` (
   `ma_bl` int(11) NOT NULL,
-  `ma_kh` varchar(50) NOT NULL,
+  `ma_kh` int(10) UNSIGNED NOT NULL,
   `ma_hh` int(11) NOT NULL,
   `noi_dung` varchar(50) NOT NULL,
   `ngay_bl` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `binh_luan`
 --
 
 INSERT INTO `binh_luan` (`ma_bl`, `ma_kh`, `ma_hh`, `noi_dung`, `ngay_bl`) VALUES
-(18, 'bi', 35, 'Giày đẹp lắm shop <3', '04-12-2020'),
-(19, 'admin', 39, 'Giày chất lắm shop <3 ', '05-12-2020'),
-(20, 'bi', 27, 'sdfsdfdsfdsfdsf', '05-12-2020');
+(18, 1, 35, 'Giày đẹp lắm shop <3', '04-12-2020'),
+(19, 1, 39, 'Giày chất lắm shop <3 ', '05-12-2020'),
+(20, 1, 27, 'sdfsdfdsfdsfdsf', '05-12-2020');
 
 -- --------------------------------------------------------
 
@@ -58,7 +58,7 @@ CREATE TABLE `hang_hoa` (
   `giam_gia` int(11) NOT NULL,
   `mo_ta` varchar(500) NOT NULL,
   `ma_loai` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `hang_hoa`
@@ -104,23 +104,23 @@ CREATE TABLE `hoa_don` (
   `ngay_mua` varchar(20) NOT NULL,
   `ghi_chu` varchar(50) NOT NULL,
   `tinh_trang` varchar(20) NOT NULL DEFAULT '0',
-  `ma_kh` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `ma_kh` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `hoa_don`
 --
 
 INSERT INTO `hoa_don` (`ma_hd`, `ngay_mua`, `ghi_chu`, `tinh_trang`, `ma_kh`) VALUES
-(93, '04-12-2020', '', '1', 'admin'),
-(94, '05-12-2020', '', '1', 'admin'),
-(95, '05-12-2020', '', '1', 'admin'),
-(96, '05-12-2020', '', '1', 'admin'),
-(97, '05-12-2020', '', '1', 'admin'),
-(98, '05-12-2020', '', '1', 'admin'),
-(99, '05-12-2020', '', '1', 'bi'),
-(100, '05-12-2020', 'sdf', '1', 'bi'),
-(101, '08-12-2020', '', '1', 'bi');
+(93, '04-12-2020', '', '1', 1),
+(94, '05-12-2020', '', '1', 1),
+(95, '05-12-2020', '', '1', 1),
+(96, '05-12-2020', '', '1', 1),
+(97, '05-12-2020', '', '1', 1),
+(98, '05-12-2020', '', '1', 1),
+(99, '05-12-2020', '', '1', 1),
+(100, '05-12-2020', 'sdf', '1', 1),
+(101, '08-12-2020', '', '1', 1);
 
 -- --------------------------------------------------------
 
@@ -133,7 +133,7 @@ CREATE TABLE `hoa_don_chi_tiet` (
   `so_luong` int(11) NOT NULL,
   `don_gia` int(11) NOT NULL,
   `ma_hh` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `hoa_don_chi_tiet`
@@ -167,22 +167,22 @@ INSERT INTO `hoa_don_chi_tiet` (`ma_hd`, `so_luong`, `don_gia`, `ma_hh`) VALUES
 --
 
 CREATE TABLE `khach_hang` (
-  `ma_kh` varchar(50) NOT NULL,
+  `ma_kh` int(10) UNSIGNED NOT NULL,
   `ho_ten` varchar(50) NOT NULL,
   `mat_khau` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `dia_chi` varchar(50) NOT NULL,
-  `vai_tro` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `trang_thai` bit(1) NOT NULL DEFAULT b'0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `khach_hang`
 --
 
-INSERT INTO `khach_hang` (`ma_kh`, `ho_ten`, `mat_khau`, `email`, `dia_chi`, `vai_tro`) VALUES
-('admin', 'Phong', '123123', 'phanvanphongk49c@gmail.com', 'Đà Nẵng', 1),
-('bi', 'Biiiiiii', '123123', 'bi@gmail.com', 'Đà Nẵng', 0),
-('thao', 'a', '123456', 'thao@gmail.com', 'Huế a', 0);
+INSERT INTO `khach_hang` (`ma_kh`, `ho_ten`, `mat_khau`, `email`, `dia_chi`, `trang_thai`) VALUES
+(1, 'Phong', '123123', 'phanvanphongk49c@gmail.com', 'Đà Nẵng', b'0'),
+(2, 'Biiiiiii', '123123', 'bi@gmail.com', 'Đà Nẵng', b'0'),
+(3, 'a', '123456', 'thao@gmail.com', 'Huế a', b'0');
 
 -- --------------------------------------------------------
 
@@ -193,7 +193,7 @@ INSERT INTO `khach_hang` (`ma_kh`, `ho_ten`, `mat_khau`, `email`, `dia_chi`, `va
 CREATE TABLE `loai_hang` (
   `ma_loai` int(11) NOT NULL,
   `ten_loai` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `loai_hang`
@@ -231,7 +231,7 @@ ALTER TABLE `hang_hoa`
 --
 ALTER TABLE `hoa_don`
   ADD PRIMARY KEY (`ma_hd`),
-  ADD KEY `ma_kh` (`ma_kh`);
+  ADD KEY `khachhang_hoadon` (`ma_kh`);
 
 --
 -- Indexes for table `hoa_don_chi_tiet`
@@ -289,7 +289,7 @@ ALTER TABLE `loai_hang`
 --
 ALTER TABLE `binh_luan`
   ADD CONSTRAINT `binh_luan_ibfk_1` FOREIGN KEY (`ma_hh`) REFERENCES `hang_hoa` (`ma_hh`),
-  ADD CONSTRAINT `binh_luan_ibfk_2` FOREIGN KEY (`ma_kh`) REFERENCES `khach_hang` (`ma_kh`);
+  ADD CONSTRAINT `khachhang_binhluan` FOREIGN KEY (`ma_kh`) REFERENCES `khach_hang` (`ma_kh`);
 
 --
 -- Constraints for table `hang_hoa`
@@ -301,7 +301,7 @@ ALTER TABLE `hang_hoa`
 -- Constraints for table `hoa_don`
 --
 ALTER TABLE `hoa_don`
-  ADD CONSTRAINT `hoa_don_ibfk_1` FOREIGN KEY (`ma_kh`) REFERENCES `khach_hang` (`ma_kh`);
+  ADD CONSTRAINT `khachhang_hoadon` FOREIGN KEY (`ma_kh`) REFERENCES `khach_hang` (`ma_kh`);
 
 --
 -- Constraints for table `hoa_don_chi_tiet`
