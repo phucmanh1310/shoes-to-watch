@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2024 at 08:24 PM
+-- Generation Time: Apr 27, 2024 at 09:25 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -200,12 +200,11 @@ CREATE TABLE `loai_hang` (
 --
 
 INSERT INTO `loai_hang` (`ma_loai`, `ten_loai`) VALUES
-(20, 'Converse'),
-(21, 'Blazer'),
-(22, 'Jordan'),
-(23, 'Pegasus'),
-(24, 'Adidas'),
-(25, 'Nike');
+(20, 'Gshock'),
+(21, 'Edifice'),
+(25, 'Baby-G'),
+(26, 'Mtp'),
+(27, 'Sheen She');
 
 --
 -- Indexes for dumped tables
@@ -278,7 +277,7 @@ ALTER TABLE `hoa_don`
 -- AUTO_INCREMENT for table `loai_hang`
 --
 ALTER TABLE `loai_hang`
-  MODIFY `ma_loai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `ma_loai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Constraints for dumped tables
