@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../bigshoes/css/danh-sach-sp/products.css">
+    <link rel="stylesheet" href="../css/danh-sach-sp/products.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../bigshoes/css/danh-sach-sp/plugin/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../../bigshoes/css/danh-sach-sp/plugin/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/danh-sach-sp/plugin/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/danh-sach-sp/plugin/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/ihover-gh-pages/src/ihover.css">
     <link rel="stylesheet" href="../css/ihover-gh-pages/src/ihover.min.css">
-    <link rel="shortcut icon" type="image/png" href="../css/trang-chu/img/TBT.png" />
+    <link rel="shortcut icon" type="image/png" href="../css/trang-chu/img/iconweb.png" />
     <title>Sản phẩm</title>
     <style>
         .sanpham {
@@ -100,30 +100,32 @@
 
 <body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="../../bigshoes/css/danh-sach-sp/plugin/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="../css/danh-sach-sp/plugin/js/owl.carousel.min.js"></script>
 
 
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4" style="background-color: rgb(54, 54, 54);text-align: center">
                 <div class="login">
+                    <!-- kiem tra dang nhap -->
                     <?php
                     session_start();
                     if (!isset($_SESSION['user'])) {
                     ?>
-                        <a href="../../bigshoes/tai-khoan/dang-nhap.php">
+                        <a href="./tai-khoan/dang-nhap.php">
                             <p><strong>ĐĂNG NHẬP / ĐĂNG KÍ</strong></p>
                         </a>
                     <?php } else { ?>
-                        <a href="../../bigshoes/tai-khoan/thong-tin-tk.php">
+                        <a href="./tai-khoan/thong-tin-tk.php">
                             <p><strong>XIN CHÀO <?= $_SESSION['user']['ho_ten'] ?></strong></p>
                         </a>
                     <?php } ?>
+                    
                 </div>
             </div>
             <div class="col-md-4" style="background-color: rgb(54, 54, 54);text-align: center">
                 <div class="logo">
-                    <a href="index.php"><img src="../css/danh-sach-sp/img/TBT.png" alt="anh"></a>
+                    <a href="../index.php"><img src="../css/trang-chu/img/iconweb.png" alt="anh"></a>
                 </div>
             </div>
             <div class="col-md-4" style="background-color: rgb(54, 54, 54);text-align: center">
@@ -204,7 +206,7 @@
                 </div>
                 <div class="row" style="margin-left: 0px;">
                     <?php
-                    require_once('../../bigshoes/admin/dao/loai-hang.php');
+                    require_once('../admin/dao/loai-hang.php');
                     extract($_REQUEST);
                     $items = loai_hang_select_all();
                     ?>
@@ -227,7 +229,7 @@
 
                         <ul class="list-group">
                             <?php
-                            require_once('../../bigshoes/admin/dao/hang-hoa.php');
+                            require_once('../admin/dao/hang-hoa.php');
                             extract($_REQUEST);
                             $items = hang_hoa_sale();
 
@@ -350,7 +352,7 @@
                         extract($item);
                     ?>
                         <div class="item">
-                            <a href="chi-tiet-sp.php?ma_hh=<?= $ma_hh ?>"><img style="width: 200px" src="../../bigshoes/css/admin/images/products/<?= $hinh ?>" alt="ds"><span class='noi-bat'>HOT</span></a>
+                            <a href="chi-tiet-sp.php?ma_hh=<?= $ma_hh ?>"><img style="width: 200px" src="../css/admin/images/products/<?= $hinh ?>" alt="ds"><span class='noi-bat'>HOT</span></a>
                         </div>
                     <?php } ?>
                 </div>
@@ -364,7 +366,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="fo">
-                            <img src="../css/trang-chu/img/TBT.png" alt="" style="width:60px;">
+                            <img src="../css/trang-chu/img/iconweb.png" alt="" style="width:60px;">
                         </div>
                     </div>
                     <div class="col-md-3">

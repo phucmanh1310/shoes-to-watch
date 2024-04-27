@@ -1,3 +1,7 @@
+<?php
+    // require_once('xu-ly/kiem-tra-dang-nhap.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +17,7 @@
     <link rel="stylesheet" href="css/trang-chu/plugin/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/trang-chu/style.css">
-    <link rel="shortcut icon" type="image/png" href="css/trang-chu/img/TBT.png" />
+    <link rel="shortcut icon" type="image/png" href="css/trang-chu/img/iconweb.png" />
 </head>
 
 <body>
@@ -25,13 +29,13 @@
     <div class="container-fluid">
         <div class="banner">
             <video autoplay muted loop id="myVideo">
-                <source src="css/trang-chu/img/production ID_4909306.mp4" type="video/mp4">
+                <source src="css/trang-chu/img/tvc.mp4" type="video/mp4">
             </video>
             <div class="row">
 
                 <div class="col-sm-2">
                     <div class="logo">
-                        <img src="css/trang-chu/img/TBT.png" alt="">
+                        <img src="css/trang-chu/img/iconweb.png" alt="">
                     </div>
 
                 </div>
@@ -66,8 +70,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="text">
-                        <p class="nho">CHÂN TÔI VẪN ĐANG ĐI TRÊN MẶT ĐẤT,</p>
-                        <p class="nho">VÀ TÔI CHỈ ĐANG ĐI NHỮNG ĐÔI GIÀY TỐT HƠN ... </p>
+                        <p class="nho">Khám phá thế giới với từng giây trôi qua</p>
+                        <p class="nho">Đồng hồ cho cuộc sống của bạn</p>
                         <P class="likk">
                             <a href="trang-chinh/danh-sach-sp.php"><span>SHOPPING</span></a>
                         </P>
@@ -305,14 +309,14 @@
     </div>
 
 
-
+<!-- footer -->
     <div class="container-fluid now2" style="margin-top: 70px;">
         <div class="row">
             <div class="container" style="margin-top: 50px;">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="fo">
-                            <img src="css/trang-chu/img/TBT.png" alt="" style="width:60px;">
+                            <img src="css/trang-chu/img/iconweb.png" alt="" style="width:60px;">
                         </div>
                     </div>
                     <div class="col-md-3">

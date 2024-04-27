@@ -37,7 +37,7 @@
 	<!-- CODE XỬ LÝ PHP -->
 	<?php
 	session_start();
-	require_once('../admin/dao/khach-hang.php');
+	require_once('./admin/dao/khach-hang.php');
 
 	extract($_REQUEST);
 	if (array_key_exists('btn_update', $_REQUEST)) {
@@ -49,9 +49,9 @@
 
 
 	if (array_key_exists('btn_logout', $_REQUEST)) {
-		header('location: ../tai-khoan/dang-xuat.php');
+		header('location: dang-xuat.php');
 	} else if (array_key_exists('btn_admin', $_REQUEST)) {
-		header('location: ../admin/');
+		header('location: ./admin/');
 	}
 	?>
 
@@ -62,7 +62,7 @@
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" method="post">
 					<span class="login100-form-logo">
-						<a href="../../bigshoes/trang-chinh/index.php"><img src="../css/tai-khoan/images/TBT.png" width="80px" alt=""></a>
+						<a href="./index.php"><img src="./css/tai-khoan/images/TBT.png" width="80px" alt=""></a>
 					</span>
 
 					<span class="login100-form-title p-b-34 p-t-27">
@@ -101,12 +101,12 @@
 
 
 					<div class="container-login100-form-btn">
-						<a href="../../dang-xuat.php">
+						<a href="dang-xuat.php">
 							<button class="login100-form-btn" type="submit" name="btn_logout">
 								ĐĂNG XUẤT
 							</button></a>&nbsp;&nbsp;
 						<?php
-						if ($vai_tro == 1) {
+						if ($trang_thai == 1) {
 						?>
 							<button class="login100-form-btn" type="submit" name="btn_admin">
 								ADMIN
@@ -132,21 +132,21 @@
 	<div id="dropDownSelect1"></div>
 
 	<!--===============================================================================================-->
-	<script src="../css/tai-khoan/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="./css/tai-khoan/vendor/jquery/jquery-3.2.1.min.js"></script>
 	<!--===============================================================================================-->
-	<script src="../css/tai-khoan/vendor/animsition/js/animsition.min.js"></script>
+	<script src="./css/tai-khoan/vendor/animsition/js/animsition.min.js"></script>
 	<!--===============================================================================================-->
-	<script src="../css/tai-khoan/vendor/bootstrap/js/popper.js"></script>
-	<script src="../css/tai-khoan/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./css/tai-khoan/vendor/bootstrap/js/popper.js"></script>
+	<script src="./css/tai-khoan/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<!--===============================================================================================-->
-	<script src="../css/tai-khoan/vendor/select2/select2.min.js"></script>
+	<script src="./css/tai-khoan/vendor/select2/select2.min.js"></script>
 	<!--===============================================================================================-->
-	<script src="../css/tai-khoan/vendor/daterangepicker/moment.min.js"></script>
-	<script src="../css/tai-khoan/vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="./css/tai-khoan/vendor/daterangepicker/moment.min.js"></script>
+	<script src="./css/tai-khoan/vendor/daterangepicker/daterangepicker.js"></script>
 	<!--===============================================================================================-->
-	<script src="../css/tai-khoan/vendor/countdowntime/countdowntime.js"></script>
+	<script src="./css/tai-khoan/vendor/countdowntime/countdowntime.js"></script>
 	<!--===============================================================================================-->
-	<script src="../css/tai-khoan/js/main.js"></script>
+	<script src="./css/tai-khoan/js/main.js"></script>
 
 </body>
 
